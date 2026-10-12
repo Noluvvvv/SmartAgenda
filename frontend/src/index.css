@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-top: #0B0D12;
+  --color-bg-bottom: #1B1E26;
+  --color-surface: #181B22;
+  --color-surface-2: #21242D;
+  --color-line: #2E323D;
+  --color-ink: #EDEEF1;
+  --color-muted: #8B8F9A;
+  --color-brand: #E7E8EC;
+  --color-brand-ink: #14161B;
+  --color-ok: #4FA98C;
+  --color-ok-bg: #1E2A26;
+  --color-danger: #C4655D;
+  --color-danger-bg: #2A1E1D;
+  --font-display: "Fraunces", serif;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  color: var(--color-ink);
+  background: linear-gradient(180deg, var(--color-bg-top) 0%, var(--color-bg-bottom) 100%);
+  background-attachment: fixed;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+html[data-tema="claro"] {
+  --color-bg-top: #F7F7F8;
+  --color-bg-bottom: #E9EAEC;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #F0F1F3;
+  --color-line: #DCDEE2;
+  --color-ink: #1C1E22;
+  --color-muted: #6B6F76;
+  --color-brand: #1C1E22;
+  --color-brand-ink: #FFFFFF;
+  --color-ok: #2F8F72;
+  --color-ok-bg: #E3F3EC;
+  --color-danger: #B13F3A;
+  --color-danger-bg: #FBEAE9;
+}
+
+html[data-tema="vermelho"] {
+  --color-bg-top: #1A0F10;
+  --color-bg-bottom: #2A1517;
+  --color-surface: #221416;
+  --color-surface-2: #2E1B1D;
+  --color-line: #3D2426;
+  --color-ink: #F1E7E7;
+  --color-muted: #A68B8C;
+  --color-brand: #E8A6A0;
+  --color-brand-ink: #241212;
+  --color-ok: #4FA98C;
+  --color-ok-bg: #1E2A26;
+  --color-danger: #D47A72;
+  --color-danger-bg: #351D1C;
+}

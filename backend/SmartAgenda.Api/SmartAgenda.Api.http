@@ -1,0 +1,54 @@
+@host = http://localhost:5296
+
+### Listar eventos
+GET {{host}}/api/eventos
+
+### Criar evento
+POST {{host}}/api/eventos
+Content-Type: application/json
+
+{
+  "titulo": "Reunião de alinhamento",
+  "descricao": "Primeira reunião do projeto",
+  "local": "Online",
+  "dataInicio": "2026-09-25T14:00:00Z",
+  "dataFim": "2026-09-25T15:00:00Z"
+}
+
+### Criar evento com data invalida (espera 400)
+POST {{host}}/api/eventos
+Content-Type: application/json
+
+{
+  "titulo": "Evento invalido",
+  "dataInicio": "2026-09-25T15:00:00Z",
+  "dataFim": "2026-09-25T14:00:00Z"
+}
+
+### Criar rotina
+POST {{host}}/api/rotinas
+Content-Type: application/json
+
+{
+  "titulo": "Estudar programação",
+  "descricao": "Bloco diário de estudo",
+  "recorrencia": 1,
+  "horaInicio": "19:00:00",
+  "horaFim": "21:00:00",
+  "ativa": true
+}
+
+### Listar rotinas
+GET {{host}}/api/rotinas
+
+### Criar rotina com hora invalida (espera 400)
+POST {{host}}/api/rotinas
+Content-Type: application/json
+
+{
+  "titulo": "Rotina invalida",
+  "recorrencia": 1,
+  "horaInicio": "21:00:00",
+  "horaFim": "19:00:00",
+  "ativa": true
+}
